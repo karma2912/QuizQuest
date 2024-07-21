@@ -6,7 +6,6 @@ import frook from "./frook.webp"
 import { Link } from 'react-router-dom'
 import GeneralKnowledge from './GeneralKnowledge'
 import ClgSubject from './ClgSubject'
-import Footer from '../Footer/Footer'
 const Home = () => {
   return (
    <>
@@ -37,7 +36,6 @@ const Home = () => {
    <div className='flex justify-center items-center pt-4'>
    <ClgSubject/>
    </div>
-   <Footer/>
    </>
   )
 }

@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import First from "./components/Test/First";
 import Home from "./components/Home/Home";
 import Subjects from "./components/SubjectList/Subjects";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
               <Navbar color="bg-yellow-200"/>
               <div className="h-screen w-full max-w-full ">
                 <Home/>
+              <Footer/>
               </div>
             </>
           }
@@ -28,9 +30,10 @@ const App = () => {
           element={
             <>
               <Navbar color="bg-red-400"/>
-              <div className="bg-red-200 h-screen w-full max-w-full flex flex-col justify-center items-center">
+              <div className="bg-white h-screen w-full max-w-full flex flex-col justify-center items-center">
                 <First/>
               </div>
+              <Footer/>
             </>
           }
         />
@@ -40,9 +43,10 @@ const App = () => {
           element={
             <>
               <Navbar color="bg-indigo-400" />
-              <div className="bg-indigo-300 h-full w-full max-w-full flex justify-center">
+              <div className="bg-white h-full w-full max-w-full flex justify-center">
                 <Subjects/>
               </div>
+              <Footer/>
             </>
           }
         />

@@ -4,7 +4,9 @@ import fpawn from "./fpawn.webp"
 import fking from "./fking.webp"
 import frook from "./frook.webp"
 import { Link } from 'react-router-dom'
-import Slider from './Slider'
+import GeneralKnowledge from './GeneralKnowledge'
+import ClgSubject from './ClgSubject'
+import Footer from '../Footer/Footer'
 const Home = () => {
   return (
    <>
@@ -29,7 +31,13 @@ const Home = () => {
    </div>
    </div>
    </div>
-   <Slider/>
+   <div className='flex justify-center items-center pb-4'>
+   <GeneralKnowledge/>
+   </div>
+   <div className='flex justify-center items-center pt-4'>
+   <ClgSubject/>
+   </div>
+   <Footer/>
    </>
   )
 }

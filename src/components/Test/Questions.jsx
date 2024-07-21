@@ -45,7 +45,7 @@ const Questions = () => {
   return (
     <>
       <div className="flex justify-between m-12">
-        <div className="question-part h-80 w-[70rem] bg-white">
+        <div className="question-part h-80 w-[70rem] bg-white rounded-2xl">
           <div className="question">
             <div className="p-1 font-medium text-xl">Question 1 of 10</div>
             <div className="mt-4 p-2 font-semibold">

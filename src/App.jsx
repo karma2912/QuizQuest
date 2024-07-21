@@ -28,7 +28,7 @@ const App = () => {
           element={
             <>
               <Navbar color="bg-red-400"/>
-              <div className="bg-red-200 h-screen w-full max-w-full flex justify-center items-center">
+              <div className="bg-red-200 h-screen w-full max-w-full flex flex-col justify-center items-center">
                 <First/>
               </div>
             </>

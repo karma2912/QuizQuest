@@ -12,28 +12,26 @@ const Questions = () => {
   const [isActiveC,setIsActiveC] = useState(false)
   const [isActiveD,setIsActiveD] = useState(false)
   const func = async ()=>{
-      const response = await fetch("https://quizapi.io/api/v1/questions?apiKey=j87NUPidsGhnLrWiOwqxD8kaGHulwIN98rUpltZg&limit=10&category=devops")
+    const host = "http://localhost:3000"
+      const response = await fetch(`${host}/getquestion`)
       const json = await response.json()
-      setQuestions(json[0].question)
-      const answers = await json[0].answers
-      setAnswer_a(json[0].answers.answer_a)
-      setAnswer_b(json[0].answers.answer_b)
-      setAnswer_c(json[0].answers.answer_c)
-      setAnswer_d(json[0].answers.answer_d)
-      console.log(json[0].correct_answer)
-      if(json[0].correct_answer === null){
-        setIsActiveD(true)
-      }
-      if(json[0].correct_answer === "answer_a"){
+      setQuestions(json[1].Question)
+      const Answers = await json[1].Answers
+      setAnswer_a(json[1].Answers.answer_a)
+      setAnswer_b(json[1].Answers.answer_b)
+      setAnswer_c(json[1].Answers.answer_c)
+      setAnswer_d(json[1].Answers.answer_d)
+      console.log(json[1].correct_answer)
+      if(json[1].correct_answer === "answer_a"){
         setIsActiveA(true)
       }
-      if(json[0].correct_answer === "answer_b"){
+      if(json[1].correct_answer === "answer_b"){
         setIsActiveB(true)
       }
-      if(json[0].correct_answer === "answer_c"){
+      if(json[1].correct_answer === "answer_c"){
         setIsActiveC(true)
       }
-      if(json[0].correct_answer === "answer_d"){
+      if(json[1].correct_answer === "answer_d"){
         setIsActiveD(true)
       }
   }

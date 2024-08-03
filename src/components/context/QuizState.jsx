@@ -7,10 +7,12 @@ const QuestState = (props) => {
     const [answer_b,setAnswer_b] = useState(null)
     const [answer_c,setAnswer_c] = useState(null)
     const [answer_d,setAnswer_d] = useState(null)
+    const [correctAnswer,setCorrectAnswer] = useState(null)
     const func = async (i)=>{
         const response = await fetch("http://localhost:3000/getquestion")
         const json = await response.json()
         setQuestion(json[i].Question)
+        setCorrectAnswer(json[i].correct_answer)
         const Answers = await json[i].Answers
         setAnswer_a(json[i].Answers.answer_a)
         setAnswer_b(json[i].Answers.answer_b)
@@ -39,9 +41,13 @@ const QuestState = (props) => {
         }, 10000);
       }
     };
+
+    const stopFunction = () =>{
+      
+    }
   return (
     <QuizContext.Provider
-    value={{func,question,answer_a,answer_b,answer_c,answer_d,timer,delayedFunction}}
+    value={{func,question,answer_a,answer_b,answer_c,answer_d,correctAnswer,timer,delayedFunction,stopFunction}}
   >
     {props.children}
   </QuizContext.Provider>

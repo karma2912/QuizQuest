@@ -1,5 +1,5 @@
 import React from 'react'
-import quiz from "./quizf.webp"
+import quiz from "./coinf.webp"
 import fpawn from "./fpawn.webp"
 import fking from "./fking.webp"
 import frook from "./frook.webp"
@@ -9,18 +9,19 @@ import ClgSubject from './ClgSubject'
 const Home = () => {
   return (
    <>
-   <div className='h-3/4 w-full bg-yellow-400 flex justify-between items-center rounded-b-[15rem] shadow-xl'>
-    <div className='text-7xl font-bold p-16'>  Daily Quiz, Daily <br/>
+   <div className='md:h-[55rem] h-[95rem]'>
+   <div className='h-[40rem] w-full bg-black flex justify-around items-center rounded-b-[15rem] shadow-xl text-yellow-400'>
+    <div className='md:text-7xl text-5xl font-bold md:p-16 p-8 flex flex-col justify-start md:items-start items-center'>  Daily Quiz, Daily <br/>
     Improve. Play Today!
-    <div className='text-xl font-normal pt-16'>
+    <div className='md:text-xl text-lg font-normal md:pt-16 pt-6'>
      QuizQuest is a quiz app which provides a variety of questions related to the College Subjects!<br/>
      It Tracks the weakness of users and provide them that level questions
     </div>
-    <Link className='text-xl font-normal border-2 border-black bg-green-400 p-2 rounded-xl' to="/test"><i className="fa-regular fa-circle-play mr-2"></i>PLAY NOW</Link>
-    <img src={quiz} className='h-5/6 position absolute top-0 right-0 '/>
+    <Link className='text-xl font-normal border-2 mt-5 border-black bg-green-400 p-2 rounded-xl text-black' to="/test"><i className="fa-regular fa-circle-play mr-2"></i>PLAY NOW</Link>
     </div>
+    <img src={quiz} className='md:h-2/3 h-0 '/>
    </div>
-   <div className='flex justify-center position relative -top-20 z-10'>
+   <div className='flex justify-center position relative md:-top-20 top-10 z-10'>
    <div className='md:h-72 h-[51rem] w-2/3 bg-white text-center p-2 rounded-2xl shadow-2xl'>
    <span className='font-semibold text-lg p-3'>Choose the option</span>
    <div className='flex md:justify-around pt-4 md:flex-row flex-col'>
@@ -30,10 +31,11 @@ const Home = () => {
    </div>
    </div>
    </div>
-   <div className='flex justify-center items-center pb-4'>
+   </div>
+   <div className='flex justify-center items-center pb-4 md:mt-10 mt-0'>
    <GeneralKnowledge/>
    </div>
-   <div className='flex justify-center items-center pt-4'>
+   <div className='flex justify-center items-center pt-4 md:mt-10 mt-0'>
    <ClgSubject/>
    </div>
    </>

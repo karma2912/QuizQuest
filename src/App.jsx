@@ -6,6 +6,8 @@ import Home from "./components/Home/Home";
 import Subjects from "./components/SubjectList/Subjects";
 import Footer from "./components/Footer/Footer";
 import QuizState from "./components/context/QuizState";
+import Result from "./components/Result/Result";
+
 
 const App = () => {
   return (
@@ -18,10 +20,23 @@ const App = () => {
           element={
             <>
               <Navbar color="bg-yellow-200"/>
-              <div className="h-screen w-full max-w-full ">
+              <div className="md:h-screen h-full w-full max-w-full md:overflow-visible overflow-x-hidden font-serif">
                 <Home/>
               <Footer/>
               </div>
+            </>
+          }
+        />
+        <Route
+          path="/results"
+          key="results"
+          element={
+            <>
+              <Navbar color="bg-red-400"/>
+              <div className="bg-white h-screen w-full max-w-full flex flex-col justify-center items-center font-serif">
+                <Result/>
+              </div>
+              <Footer/>
             </>
           }
         />
@@ -31,7 +46,7 @@ const App = () => {
           element={
             <>
               <Navbar color="bg-red-400"/>
-              <div className="bg-white h-screen w-full max-w-full flex flex-col justify-center items-center">
+              <div className="bg-white h-screen w-full max-w-full flex flex-col justify-center items-center font-serif">
                 <First/>
               </div>
               <Footer/>
@@ -44,7 +59,7 @@ const App = () => {
           element={
             <>
               <Navbar color="bg-indigo-400" />
-              <div className="bg-white h-full w-full max-w-full flex justify-center">
+              <div className="bg-white h-full w-full max-w-full flex justify-center font-serif">
                 <Subjects/>
               </div>
               <Footer/>
